@@ -11,8 +11,8 @@ const validatePostHelloCouchDb = new Schema({
     dataSchema:{
         _id: Joi.string().required(),
         _rev: Joi.string().required(),
-        hello: Joi.string().allow('').required(),
-        goodbye: Joi.string().allow('').required(),
+        hello: Joi.string().allow('').optional(),
+        goodbye: Joi.string().allow('').optional(),
     },
     createIgnoreKeys: ['_id', '_rev'], // keys to be stripped on getCreateData() call
     updateIgnoreKeys: ['_id'], // keys to be stripped on getUpdateData() call
