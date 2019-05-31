@@ -18,7 +18,18 @@
     "create",
     "api"
   ],
-  "author": "Toomas Sõukand <toomas.soukand@pipedrive.com>",
+  "author": {
+    "email": "toomas.soukand@gmail.com",
+    "name": "Toomas Sõukand",
+    "url": "https://github.com/soukand"
+  },
+  "contributors": [
+    {
+      "name": "Lauri Piisang",
+      "email":  "lauri.piisang@eesti.ee",
+      "url": "https://github.com/lauripiisang"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pipedrive/joi-schema/issues"

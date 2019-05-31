@@ -14,8 +14,19 @@ const validatePostHelloCouchDb = new Schema({
         hello: Joi.string().allow('').required(),
         goodbye: Joi.string().allow('').required(),
     },
-    createIgnoreKeys: ['_id', '_rev'],
-    updateIgnoreKeys: ['_id'],
-    xor: ['hello', 'goodbye']
+    createIgnoreKeys: ['_id', '_rev'], // keys to be stripped on getCreateData() call
+    updateIgnoreKeys: ['_id'], // keys to be stripped on getUpdateData() call
+    bulkUpdateIgnoreKeys: [], // keys to be stripped on getBulkUpdateData() call
+    xor: ['hello', 'goodbye'] // validation checks that one and only one of the xor keys is present
 });
+
+const validatedData = await validatePostHelloCouchDb.getCreateData({
+        _id: '123',
+        _rev: '321',
+        hello: 'Hello World',
+        nonsense: 'Foo',
+});
+console.log(JSON.stringify(validatedData));
+//{hello:  'Hello World'}
+
 ```
