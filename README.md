@@ -28,5 +28,4 @@ const validatedData = await validatePostHelloCouchDb.getCreateData({
 });
 console.log(JSON.stringify(validatedData));
 //{hello:  'Hello World'}
-
 ```
