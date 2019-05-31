@@ -1,6 +1,6 @@
 {
   "name": "@pipedrive/joi-schema",
-  "version": "v0.0.0",
+  "version": "1.0.0",
   "description": "Schema class to use with Joi validation - provides use cases for database records with different create/update strategies",
   "main": "schema.js",
   "scripts": {
